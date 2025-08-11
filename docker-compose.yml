@@ -1,6 +1,6 @@
 services:
   app:
-    image: subhranshu2332/dam_app:latest
+    image: dam_app:latest
     ports:
       - "3000:3000"
     env_file:
@@ -16,7 +16,7 @@ services:
       - redis
 
   worker:
-    image: subhranshu2332/dam_worker:latest
+    image: dam_worker:latest
     volumes:
       - ./data:/app/data
     env_file:
@@ -28,7 +28,7 @@ services:
       - minio
 
   redis:
-    image: redis:7
+    image: redis
     ports:
       - "6379:6379"
 
