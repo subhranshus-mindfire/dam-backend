@@ -8,6 +8,7 @@ import { AssetTag } from "../models/AssetTag";
 export const createAssetTag = async (req: Request, res: Response) => {
   try {
     const assetTag = await AssetTag.create(req.body);
+    await assetTag.save()
     res.status(201).json(assetTag);
   } catch (error) {
     res.status(400).json({ message: "Error creating AssetTag", error });

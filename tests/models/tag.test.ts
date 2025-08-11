@@ -1,4 +1,4 @@
-import { Tag } from '../src/models/Tag';
+import { Tag } from '../../src/models/Tag';
 
 describe('Tag model', () => {
   it('creates a tag', async () => {

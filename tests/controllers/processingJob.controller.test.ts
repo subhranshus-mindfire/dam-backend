@@ -1,6 +1,6 @@
 import request from "supertest";
-import app from "../src/app";
-import { ProcessingJob } from "../src/models/ProcessingJob";
+import app from "../../src/app";
+import { ProcessingJob } from "../../src/models/ProcessingJob";
 import mongoose from "mongoose";
 
 describe("ProcessingJob controller & routes", () => {

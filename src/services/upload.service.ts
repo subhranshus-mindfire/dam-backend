@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { minioClient } from "../config/minio";
+import { minioClient } from "../config/minio.connection";
 import { processingQueue } from "../queues/processing.queue";
 import { v4 as uuidv4 } from "uuid";
 import { UploadedFile } from "../types/upload.types";

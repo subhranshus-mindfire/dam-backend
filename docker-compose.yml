@@ -1,6 +1,8 @@
 services:
   app:
-    image: dam_app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     env_file:
@@ -9,14 +11,16 @@ services:
       - NODE_ENV=development
     volumes:
       - .:/app
-      - /app/node_modules
       - ./data:/app/data
     command: npm run dev
     depends_on:
       - redis
+      - postgres
 
   worker:
-    image: dam_worker:latest
+    build:
+      context: .
+      dockerfile: worker.Dockerfile
     volumes:
       - ./data:/app/data
     env_file:
@@ -26,6 +30,7 @@ services:
     depends_on:
       - redis
       - minio
+      - postgres
 
   redis:
     image: redis
@@ -44,5 +49,17 @@ services:
     volumes:
       - minio-data:/data
 
+  postgres:
+    image: postgres:16
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: dam_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
 volumes:
   minio-data:
+  postgres-data:

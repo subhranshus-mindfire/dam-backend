@@ -8,6 +8,7 @@ import { Asset } from "../models/Asset";
 export const createAsset = async (req: Request, res: Response) => {
   try {
     const asset = await Asset.create(req.body);
+    await asset.save()
     res.status(201).json(asset);
   } catch (error) {
     res.status(400).json({ error: (error as Error).message });
@@ -55,6 +56,7 @@ export const updateAsset = async (req: Request, res: Response) => {
     if (!asset) {
       return res.status(404).json({ error: "Asset not found" });
     }
+    await asset.save()
     res.json(asset);
   } catch (error) {
     res.status(400).json({ error: (error as Error).message });

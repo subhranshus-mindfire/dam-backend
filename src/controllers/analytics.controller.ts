@@ -20,6 +20,8 @@ export const createAnalytics = async (req: Request, res: Response) => {
       last_viewed_at
     });
 
+    await analytics.save()
+
     res.status(201).json(analytics);
   } catch (error) {
     res.status(500).json({ message: (error as Error).message });
@@ -63,6 +65,8 @@ export const updateAnalytics = async (req: Request, res: Response) => {
     if (!analytics) {
       return res.status(404).json({ message: "Analytics not found" });
     }
+
+    await analytics.save()
 
     res.json(analytics);
   } catch (error) {

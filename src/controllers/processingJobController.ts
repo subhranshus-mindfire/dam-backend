@@ -20,7 +20,7 @@ export const createProcessingJob = async (req: Request, res: Response) => {
       started_at,
       finished_at
     });
-
+    await job.save()
     res.status(201).json(job);
   } catch (err) {
     res.status(400).json({ message: "Failed to create processing job", error: err });
@@ -58,6 +58,7 @@ export const updateProcessingJob = async (req: Request, res: Response) => {
   const updated = await ProcessingJob.findByIdAndUpdate(id, req.body, { new: true }).lean();
   if (!updated) return res.status(404).json({ message: "Processing job not found" });
 
+  await updated.save()
   res.json(updated);
 };
 

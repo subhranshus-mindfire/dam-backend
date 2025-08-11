@@ -1,6 +1,6 @@
 import request from 'supertest';
-import app from '../src/app';
-import { Analytics } from '../src/models/Analytics';
+import app from '../../src/app';
+import { Analytics } from '../../src/models/Analytics';
 import mongoose from 'mongoose';
 
 describe('Analytics controller & routes', () => {

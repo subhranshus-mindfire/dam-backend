@@ -9,6 +9,7 @@ import { Download } from "../models/Download";
 export const createDownload = async (req: Request, res: Response) => {
   try {
     const download = await Download.create(req.body);
+    await download.save()
     res.status(201).json(download);
   } catch (error) {
     res.status(400).json({ message: (error as Error).message });
@@ -59,6 +60,7 @@ export const updateDownload = async (req: Request, res: Response) => {
     if (!download) {
       return res.status(404).json({ message: "Download not found" });
     }
+    await download.save()
     res.status(200).json(download);
   } catch (error) {
     res.status(400).json({ message: (error as Error).message });

@@ -31,6 +31,8 @@ export const createUser = async (req: Request, res: Response) => {
       role,
     });
 
+    await user.save()
+
     const userObj = user.toObject();
     delete (userObj as any).password_hash;
 
@@ -98,6 +100,7 @@ export const updateUser = async (req: Request, res: Response) => {
     const updated = await User.findByIdAndUpdate(id, update, { new: true }).select('-password_hash');
     if (!updated) return res.status(404).json({ message: 'user not found' });
 
+    await updated.save()
     return res.json(updated);
   } catch (err: unknown) {
     if (err instanceof mongoose.Error.ValidationError) {
@@ -122,7 +125,7 @@ export const deleteUser = async (req: Request, res: Response) => {
     const { id } = req.params;
     const del = await User.findByIdAndDelete(id);
     if (!del) return res.status(404).json({ message: 'user not found' });
-    return res.json({ message: 'user deleted' });
+    return res.status(204).json({ message: 'user deleted' });
   } catch (err: unknown) {
     if (err instanceof Error) {
       return res.status(500).json({ message: err.message });

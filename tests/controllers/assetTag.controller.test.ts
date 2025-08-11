@@ -1,8 +1,8 @@
 import request from 'supertest';
-import app from '../src/app';
-import { AssetTag } from '../src/models/AssetTag';
-import { Asset } from '../src/models/Asset';
-import { Tag } from '../src/models/Tag';
+import app from '../../src/app';
+import { AssetTag } from '../../src/models/AssetTag';
+import { Asset } from '../../src/models/Asset';
+import { Tag } from '../../src/models/Tag';
 import mongoose from 'mongoose';
 
 describe('AssetTag controller & routes', () => {

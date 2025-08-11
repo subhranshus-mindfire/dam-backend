@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import {User} from '../src/models/User';
-import {Asset} from '../src/models/Asset';
-import {Analytics} from '../src/models/Analytics';
+import {User} from '../../src/models/User';
+import {Asset} from '../../src/models/Asset';
+import {Analytics} from '../../src/models/Analytics';
 
 describe('Analytics model', () => {
   let userId: mongoose.Types.ObjectId;

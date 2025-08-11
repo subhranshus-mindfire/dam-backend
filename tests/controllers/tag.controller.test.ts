@@ -1,6 +1,6 @@
 import request from 'supertest';
-import app from '../src/app';
-import { Tag } from '../src/models/Tag';
+import app from '../../src/app';
+import { Tag } from '../../src/models/Tag';
 import mongoose from 'mongoose';
 
 describe('Tag controller & routes', () => {

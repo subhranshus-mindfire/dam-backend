@@ -1,6 +1,6 @@
 import { Worker } from "bullmq";
-import { redisConnection } from "../config/redis";
-import { minioClient } from "../config/minio";
+import { redisConnection } from "../config/redis.connection";
+import { minioClient } from "../config/minio.connection";
 import fs from "fs";
 import path from "path";
 import { exec } from "child_process";

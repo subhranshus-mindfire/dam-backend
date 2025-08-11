@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
-import {User} from '../src/models/User';
-import {Asset} from '../src/models/Asset';
-import {Tag} from '../src/models/Tag';
-import {AssetTag} from '../src/models/AssetTag';
+import {User} from '../../src/models/User';
+import {Asset} from '../../src/models/Asset';
+import {Tag} from '../../src/models/Tag';
+import {AssetTag} from '../../src/models/AssetTag';
 
 describe('AssetTag (join) model', () => {
   let userId: mongoose.Types.ObjectId;

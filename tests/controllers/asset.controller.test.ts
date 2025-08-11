@@ -1,6 +1,6 @@
 import request from 'supertest';
-import app from '../src/app';
-import { Asset } from '../src/models/Asset';
+import app from '../../src/app';
+import { Asset } from '../../src/models/Asset';
 import mongoose from 'mongoose';
 
 describe('Asset controller & routes', () => {

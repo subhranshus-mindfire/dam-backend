@@ -1,6 +1,6 @@
 import request from "supertest";
-import app from "../src/app";
-import { Download } from "../src/models/Download";
+import app from "../../src/app";
+import { Download } from "../../src/models/Download";
 import mongoose from "mongoose";
 
 describe("Download controller & routes", () => {
