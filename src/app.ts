@@ -7,6 +7,8 @@ import userRoutes from './routes/user.routes';
 import AnalyticsRoutes from './routes/analytics.route';
 import assetsRoutes from "./routes/asset.routes"
 import assetTagsRoutes from "./routes/assetTag.routes"
+import downloadsRoutes from "./routes/download.routes"
+
 
 
 
@@ -20,6 +22,8 @@ app.use('/api/users', userRoutes);
 app.use('/api/analytics', AnalyticsRoutes);
 app.use('/api/assets', assetsRoutes);
 app.use('/api/asset-tags', assetTagsRoutes);
+app.use('/api/downloads', downloadsRoutes);
+
 
 
 
