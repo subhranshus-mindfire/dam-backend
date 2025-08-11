@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1754892441473" clover="3.2.0">
+  <project timestamp="1754892441473" name="All files">
+    <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="22" coveredelements="22" complexity="0" loc="22" ncloc="22" packages="1" files="7" classes="7"/>
+    <file name="Analytics.ts" path="/home/subhranshus/Projects/MERN/Assignments/assignment10/dam_backend/src/models/Analytics.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+    </file>
+    <file name="Asset.ts" path="/home/subhranshus/Projects/MERN/Assignments/assignment10/dam_backend/src/models/Asset.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="5" type="stmt"/>
+      <line num="14" count="5" type="stmt"/>
+      <line num="28" count="5" type="stmt"/>
+    </file>
+    <file name="AssetTag.ts" path="/home/subhranshus/Projects/MERN/Assignments/assignment10/dam_backend/src/models/AssetTag.ts">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+    </file>
+    <file name="Download.ts" path="/home/subhranshus/Projects/MERN/Assignments/assignment10/dam_backend/src/models/Download.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+    </file>
+    <file name="ProcessingJob.ts" path="/home/subhranshus/Projects/MERN/Assignments/assignment10/dam_backend/src/models/ProcessingJob.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+    </file>
+    <file name="Tag.ts" path="/home/subhranshus/Projects/MERN/Assignments/assignment10/dam_backend/src/models/Tag.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+    </file>
+    <file name="User.ts" path="/home/subhranshus/Projects/MERN/Assignments/assignment10/dam_backend/src/models/User.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="6" type="stmt"/>
+      <line num="11" count="6" type="stmt"/>
+      <line num="22" count="6" type="stmt"/>
+    </file>
+  </project>
+</coverage>
