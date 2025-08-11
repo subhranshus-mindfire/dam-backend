@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    image: subhranshu2332/dam_app:latest
     ports:
       - "3000:3000"
     env_file:
@@ -8,18 +8,15 @@ services:
     environment:
       - NODE_ENV=development
     volumes:
-      - .:/app               
-      - /app/node_modules  
+      - .:/app
+      - /app/node_modules
       - ./data:/app/data
-    command: npm run dev     
+    command: npm run dev
     depends_on:
-      - ffmpeg
       - redis
 
   worker:
-    build:
-      context: .
-      dockerfile: worker.Dockerfile
+    image: subhranshu2332/dam_worker:latest
     volumes:
       - ./data:/app/data
     env_file:
@@ -29,7 +26,6 @@ services:
     depends_on:
       - redis
       - minio
-      - ffmpeg
 
   redis:
     image: redis:7
@@ -47,12 +43,6 @@ services:
       MINIO_ROOT_PASSWORD: minio123
     volumes:
       - minio-data:/data
-
-  ffmpeg:
-    image: jrottenberg/ffmpeg:4.4-ubuntu
-    container_name: dam_backend_ffmpeg_1
-    volumes:
-      - ./data:/data
 
 volumes:
   minio-data:
